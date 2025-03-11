@@ -1,0 +1,16 @@
+# Ignore node_modules (huge files, can be installed via package.json)
+node_modules/
+
+# Ignore lock files (optional, but recommended)
+package-lock.json
+
+# Ignore build or generated files (if applicable)
+dist/
+build/
+
+# Ignore Tailwind's output CSS file (if generated separately)
+*.css.map
+
+# Ignore system/macOS-specific files
+.DS_Store
+Thumbs.db

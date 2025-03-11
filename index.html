@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App | Get Weather Related Information</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="assets/weather-2021-12-07.avif" type="image/x-icon">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+<!--wapper-->
+<div class="w-[100vw] h-[100vh] overflow-x-hidden bg-gradient-to-br from-blue-950 to-blue-700">
+    <!--container-->
+    <div class="w-[90%] sm:w-[70%]  xl:w-[40%] my-[10%] sm:my-[3%] mx-auto">
+        <h1 class="text-center mb-16 text-white  text-5xl sm:text-4xl font-bold uppercase">Weather app</h1>
+    <!--buttons-->
+    <div class="w-[100%] flex justify-between">
+        <button your_weather class="text-white opacity-80 text-3xl sm:text-2xl xl:text-sm font-semibold py-1 px-2 rounded-md">Your Weather</button>
+        <button search_weather class="text-white font-semibold opacity-80 text-3xl sm:text-2xl xl:text-sm  py-1 px-2 rounded-md">Search Weather</button>
+    </div>    
+    <!--sub container-->
+     <div>
+        <!--grant access container-->
+        <div  grant_access class="mt-16 flex flex-col gap-10 w-[100%] items-center hidden">
+         <img loading="lazy" src="assets/location.png" alt="" class="w-[20%] sm:w-[15%] aspect-square">
+         <div>
+            <h1 class="text-white text-3xl sm:text-2xl font-bold opacity-80 uppercase text-center">Grant Location Access</h1>
+            <p class="leading-10 text-white text-xl sm:text-sm text-center opacity-80">Allow Access To Get Weather Information</p>
+         </div>
+         <button grant_access_button class="py-2 px-6 uppercase bg-blue-400 bg-opacity-50 text-white rounded-lg text-lg sm:text-sm font-semibold">grant access</button>
+        </div>
+
+        <!--search weather container--->
+        <div search class="mt-20 w-[100%] flex justify-between items-center hidden">
+         <input  type="text" id=""  placeholder="Search for city..." class="text-white text-2xl sm:text-xl pl-5 w-[90%] h-10 rounded-lg bg-gray-400 bg-opacity-50 focus:outline-light_white placeholder:text-light_white placeholder:text-lg">
+         <button search_button class="w-[8%] text-white aspect-square bg-gray-400 bg-opacity-50 rounded-full"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+
+        <!--loading container-->
+        <div loading_image class="mt-8 flex flex-col justify-center items-center hidden">
+            <img loading="lazy" src="assets/loading.gif" alt="" class="w-[30%] aspect-square">
+            <p class="text-white opacity-80 uppercase text-center font-semibold">loading</p>
+        </div>
+
+        <!--city not found-->
+        <div error class="mt-8 flex flex-col justify-center items-center gap-2 hidden">
+            <img loading="lazy" src="assets/not-found.png" alt="" class="w-[50%]">
+            <p city_not_found class="text-white opacity-80 font-semibold text-2xl sm:text-lg"></p> 
+        </div>
+
+        <!--tempature container-->
+        <div tempature class="mt-10 flex flex-col gap-5 w-[100%] items-center hidden">
+            <div class="flex gap-2 justify-center items-end">
+                <h1 my_city class="text-4xl font-semibold text-light_white"></h1>
+                <img loading="lazy" src="" alt="" my_city_ico width="20%">
+            </div>
+
+            <div my_weather class="text-3xl text-light_white"></div>
+            <img loading="lazy" my_weather_icon width="20%"></img>
+
+            <div my_tempature class="text-5xl text-white"></div>
+            <!--card section-->
+            <div class="flex flex-col sm:flex-row gap-5 sm:gap-0 justify-between items-center w-[100%]">
+              <!--card 1-->
+              <div class="w-[70%] sm:w-[30%] bg-slate-400 flex flex-col justify-center items-center rounded-lg">
+                <img loading="lazy" src="assets/wind.png" alt="" class="w-[30%]">
+                <h1 class="uppercase text-2xl text-light_white">windspeed</h1>
+                <div windspeed class="text-2xl text-light_white mb-[10%]"></div>
+              </div>
+              <!--card 2-->
+              <div class="w-[70%] sm:w-[30%] bg-slate-400 flex flex-col justify-center items-center rounded-lg">
+                <img loading="lazy" src="assets/humidity.png" alt="" class="w-[30%]">
+                <h1 class="uppercase text-2xl text-light_white">humidity</h1>
+                <div humidity class="text-2xl text-light_white mb-[10%]"></div>
+              </div>
+              
+              <!--card 3-->
+              <div class="w-[70%] sm:w-[30%] bg-slate-400 flex flex-col justify-center items-center rounded-lg">
+                <img loading="lazy" src="assets/cloud.png" alt="" class="w-[30%]">
+                <h1 class="uppercase text-2xl text-light_white">clouds</h1>
+                <div clouds class="text-2xl text-light_white mb-[10%]"></div>
+              </div>
+
+            </div>
+        </div>
+     </div>    
+    </div>
+</div>
+
+
+
+
+<script src="script.js"></script>    
+</body>
+</html>
